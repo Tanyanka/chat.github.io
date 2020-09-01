@@ -33,7 +33,7 @@ const Home: NextPage<Props> = (props) => {
             <Layout slug='home'>
                 <h1>Messenger with bots</h1>
                 <button onClick={() => {
-                    get('/answer').then(
+                    get('answer').then(
                         (data) => {
                             console.log("data: ", data)
                     }
