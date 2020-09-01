@@ -14,7 +14,7 @@ module.exports = {
         'REACT_APP_MESSAGING_SENDER_ID': process.env.MESSAGING_SENDER_ID,
         'REACT_APP_APP_ID': process.env.APP_ID
     },
-    assetPrefix: !debug ? '/chat/' : '',
+    assetPrefix: !debug ? '/chat.github.io/' : '',
     webpack: (config) => {
         config.module.rules = config.module.rules.map(rule => {
             if(rule.loader === 'babel-loader') {
