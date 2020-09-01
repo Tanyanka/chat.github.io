@@ -22,13 +22,6 @@ const nextHandle = app.getRequestHandler();
 function getRandomNumber(maxNumber) {
     return Math.floor(Math.random()*maxNumber)
 }
-async function getData() {
-
-    return (await db.firestore()
-        .collection('bots')
-        .doc("lkIXMVssZbs1elASVEvQ")
-        .get()).data();
-}
 app.prepare()
     .then(() => {
         console.log('prepare');

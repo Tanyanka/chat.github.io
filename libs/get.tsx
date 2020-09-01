@@ -11,6 +11,7 @@ type TRequest = (a: string, b?: {}) => Promise<any>;
 
 export const get: TRequest = (endpoint, params) => {
 
+    const url = process.env.NODE_ENV === 'production' ? `${window.location.href}${endpoint}` : endpoint;
     return new Promise((resolve, reject) => {
         axios({
             method: "get",
